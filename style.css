@@ -1,0 +1,382 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans');
+
+:root {
+    --TMS--shadow: 0px 1px 8px 0;
+    --TMS--shadow-b: 0px 1px 8px 0 black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.flex-row-sa {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.flex-row-sb {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.tms-btn {
+    border: none;
+    padding: 10px 20px;
+    background: linear-gradient(180deg, #EB3F57 0%, #893944 100%);
+    box-shadow: 5px 5px 10px rgba(170, 170, 204, 0.25), 10px 10px 20px rgba(170, 170, 204, 0.5);
+    border-radius: 32px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .5s all ease-in-out;
+    color: #fff;
+}
+
+.tms-btn:hover {
+    box-shadow: var(--TMS--shadow);
+}
+
+.section-about>.about-wwa>.about-wwa-content>.tms-btn:hover {
+    box-shadow: var(--TMS--shadow-b);
+}
+
+body {
+    width: auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/* Nav Start */
+.nav-main {
+    position: relative;
+    /* background-color: rgb(166, 166, 166); */
+    align-items: center;
+    box-shadow: var(--TMS--shadow);
+    padding: 5px 0;
+    z-index: 99;
+    transition: .5 all ease-in-out;
+}
+
+.nav-main>.nav-logo img {
+    height: 40px;
+}
+
+.nav-content {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav-content>li {
+    margin: 10px 20px;
+}
+
+.mob-view {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .flex-row-sa {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .nav-main {
+        padding: 5px 20px;
+    }
+
+    .nav-content {
+        display: none;
+    }
+
+    .nav-main>.nav-logo img {
+        height: 30px;
+    }
+
+    .mob-view {
+        display: block;
+    }
+}
+
+/* Nav End */
+
+/* 1st Section */
+
+.section-home {
+    position: relative;
+    background-color: aqua;
+    height: 600px;
+    background-image:
+        linear-gradient(to right, rgba(117, 19, 93, 0.50), rgba(41, 62, 197, 0.50)),
+        url('./assets/background/AdobeStock.png');
+    background-position: center;
+    background-size: cover;
+}
+
+.home-title {
+    font-size: 36px;
+}
+
+.home-description {
+    font-size: 21px;
+}
+
+.home-content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.home-content h2 {
+    color: #EB3F57;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 49px;
+}
+
+.home-content>h5 {
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+    color: #FFFFFF;
+}
+
+.home-content>.tms-btn {
+    margin-top: 50px;
+}
+
+.home-content>.down-arrow {
+    margin-top: 50px;
+    color: #fff;
+}
+
+@media (max-width: 768px) {
+    .section-home {
+        position: relative;
+        background-color: aqua;
+        height: 400px;
+        background-image:
+            linear-gradient(to right, rgba(117, 19, 93, 0.50), rgba(41, 62, 197, 0.50)),
+            url('./assets/background/AdobeStock.png');
+        background-size: cover;
+        background-position: center;
+    }
+
+    .home-content {
+        position: relative;
+        left: 0;
+        top: 0;
+        transform: translate(0, 0);
+        /* text-align: center; */
+    }
+
+    .home-content>h5 {
+        color: black;
+    }
+}
+
+.about-wwa,
+.about-wbf,
+.our-products {
+    margin-top: 50px;
+}
+
+.about-wwa {
+    position: relative;
+    height: 500px;
+    width: calc(100% - 5rem);
+    float: right;
+    align-items: right;
+
+}
+
+.about-wwa>.about-wwa-img>img {
+    height: 450px;
+}
+
+.header,
+.title {
+    text-transform: uppercase;
+}
+
+.about-wwa>.about-wwa-content>.header {
+    width: 7rem;
+}
+
+.header {
+    font-size: 30px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.header::after {
+    position: absolute;
+    color: red;
+    bottom: -10px;
+    transform: scaleX(3);
+}
+
+.about-wwa>.about-wwa-content>.header::after {
+    content: "\2192";
+    left: 15px;
+}
+
+.about-wbf>.about-wbf-content>.header::after {
+    content: "\2190";
+    right: 15px;
+}
+
+.title,
+.description {
+    width: 80%;
+}
+
+.title {
+    color: #EB3F57;
+    font-size: 30px;
+}
+
+.description {
+    font-size: 16px;
+    margin: 1.5rem 0;
+    /* width: 9rem; */
+}
+
+@media (max-width: 768px) {
+    .section-about {
+        position: relative;
+        margin-top: 40rem;
+    }
+
+    .about-wwa {
+        flex-direction: column-reverse;
+    }
+    .about-wbf{
+        flex-direction: column;
+    }
+}
+
+.about-wbf {
+    height: 500px;
+    width: calc(100% - 5rem);
+    float: left;
+    align-items: left;
+    position: relative;
+    flex-direction: row-reverse !important;
+
+}
+
+.about-wbf>.about-wbf-img>img {
+    height: 450px;
+}
+
+.about-wbf>.about-wbf-content>.header {
+    width: 7rem;
+}
+
+.about-wbf-content {
+    text-align: -webkit-right;
+}
+
+.wbf-content {
+    display: flex;
+    width: 80%;
+    margin: 20px 0;
+}
+
+.wbf-content>.wbf-content-icon>img {
+    height: 80px;
+    width: 80px;
+    margin: 10px 20px;
+}
+
+.wbf-content-title,
+.wbf-content-description {
+    text-align: left;
+}
+
+.wbf-content-title {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.wbf-content-description {
+    font-size: 15px;
+}
+
+.product-content {
+    margin: 0 3rem;
+    text-align: center;
+}
+
+.product-content>.pro-header {
+    text-align: left;
+}
+
+.our-products>.product-content>.pro-header>.header::after {
+    content: "\2192";
+    left: 15px;
+}
+
+.pro-content{
+    width: 80%;
+    margin-left: 10rem;
+    flex-wrap: wrap;
+}
+
+.pro-content>.card {
+    position: relative;
+    width: 18.5rem;
+    text-align: left;
+    margin: 10px;
+}
+
+.pro-content>.card:nth-child(3n-1) {
+    margin-top: 50px;
+}
+
+.card-icon{
+    position: relative;
+    background-color: rgb(139, 139, 139);
+    width: 100%;
+    height: 150px;
+}
+
+.card-icon>img{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 50px;
+}
+
+.card-title,
+.card-description,
+.readmore{
+    margin-top: 10px;
+}
+.card-title{
+    font-weight: bold;
+    font-size: 20px;
+}
+.card-description{
+    font-size: 15px;
+}
+.readmore>a{
+    text-transform: uppercase;
+    color: red;
+}
